@@ -16,7 +16,7 @@ def riffle_shuffle(deck, deck1, deck2):
     return shuffled
 
 #main function
-x = int(input("Enter max deck numbers you want to find up to:"))
+x = int(input("Enter max deck numbers you want to find up to: ")) # insert large number to visualize trends
 
 deck_sizes = []
 riffle_counts = []
@@ -41,18 +41,16 @@ for i in range(2,x+2,2):
     deck_sizes.append(i)
     riffle_counts.append(count)
 
+# plot results
 x = np.linspace(0, x)
 y = x/2
-y2 = x/2
-
+y2 = x/3
 plt.plot(x, x, label='x=y')
 plt.plot(x, y, label='x=1/2*y')
 plt.plot(x, y2, label='x=1/3*y')
-
-# Plotting
-plt.scatter(deck_sizes, riffle_counts, marker='o', label="Data points")
+plt.scatter(deck_sizes, riffle_counts, marker='o', label="Data points", s=5, c='r')
 plt.xlabel('Deck Size')
 plt.ylabel('Number of Riffle Shuffles')
 plt.title('Number of Riffle Shuffles Required for Different Deck Sizes')
+plt.legend(loc='best')
 plt.show()
-plt.legend()
