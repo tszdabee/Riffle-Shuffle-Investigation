@@ -2,12 +2,18 @@
 
 The Riffle Shuffle Project aims to simulate and analyze the riffle shuffle technique used in card shuffling. It explores the relationship between the size of the deck and the number of riffle shuffles required for the deck to return to its original order. This project utilizes Python, NumPy, and Matplotlib.
 
-## Functions
+## Methodology
+The project follows a step-by-step approach, after a deck size is defined:
 
-The project includes the following functions:
+1. Deck Splitting: The deck of cards is initially split into two equal halves. This splitting mimics the typical action of splitting the deck into two piles before performing a riffle shuffle.
 
-- `split_deck(deck)`: Splits the deck of cards into two halves.
-- `riffle_shuffle(deck, deck1, deck2)`: Performs the riffle shuffle on the deck using the given halves.
+2. Riffle Shuffle: The riffle shuffle is performed on the deck by interleaving the cards from the two halves. This process involves alternately selecting cards from each half and placing them into a new shuffled deck.
+
+3. Shuffle Analysis: The number of riffle shuffles required for the deck to return to its original order is determined. This analysis is conducted for various deck sizes, starting from 2 and increasing incrementally.
+
+4. Visualization: The results of the analysis are plotted using Matplotlib. The deck sizes are represented on the x-axis, while the corresponding number of riffle shuffles is displayed on the y-axis. Additionally, reference lines for x=y, x=1/2y, and x=1/3y are included to aid in visualizing any patterns or relationships.
+
+By following this methodology, the Riffle Shuffle Project provides insights into the behavior of the riffle shuffle technique and how it relates to the size of the deck. The generated plots and analysis contribute to a better understanding of the mathematical aspects and patterns associated with riffle shuffling in card games.
 
 ## Usage
 
